@@ -1,0 +1,115 @@
+/* importer les fonts */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(255, 254, 254);
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 800;
+}
+#reseaux {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#reseaux span {
+    display: flex;
+    justify-content: flex-end; 
+    gap: 20px;
+}
+#reseaux span a {
+  font-size: 25px;
+  color: rgb(91, 89, 89);
+}
+#contact{
+    display: flex;
+}
+#formulaire{ 
+    height: 100vh;  
+    display: flex;
+    width: 78%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+#coordonnées{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding-right: 80px;
+}
+textarea{
+    resize: none;
+    width: 100%;
+}
+form {
+  max-width: 900px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#login{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.input-field,
+.container_checkbox{
+    position: relative;
+    width: 350px;
+}
+.input-field label{
+    position: absolute;
+    pointer-events: none;
+    border-color: transparent;
+    left: 15px;
+    transform: translateY(0.6rem);
+    transition: all 0.3s ease;
+}
+.input-field input,
+.input-field textarea{
+    padding: 10px 15px;
+    font-style: 1rem;
+    border-radius: 8px;
+    border: 1px solid #b9b8b8;
+    letter-spacing: 1px;
+    width: 100%;
+    background-color: #ffffff;
+}
+.input-field input:focus,
+.input-field input:valid,
+.input-field textarea:focus,
+.input-field textarea:valid{
+outline: none;
+}
+.input-field input:focus ~ label,
+.input-field input:valid ~ label,
+.input-field textarea:focus ~ label,
+.input-field textarea:valid ~ label{
+    transform: translateY(-51%) translateX(-10px) scale(0.8);
+background-color: #fff;
+padding: 0px 5px;
+color: #b9b8b8;
+font-weight: bold;
+letter-spacing: 1px;
+border: none;
+border-radius: 100px;
+}
+
+.btn{
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-family: "Cormorant Garamond", serif;
+    border-radius: 8px;
+    border: none;
+    background-color: #b9b8b8;
+    color: #fff;
+    cursor: pointer;
+}
