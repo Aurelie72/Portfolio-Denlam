@@ -15,10 +15,12 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap"
       rel="stylesheet"
     />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <header>
       <h1>Denlam</h1>
+      <img src="./original.png" alt="">
       <nav>
         <ul>
           <li>Etude et Agencement</li>
@@ -130,9 +132,32 @@
               <input type="text" required autocomplete="off" />
               <label for="username">Nom d'utilisateur</label>
             </div>
+
             <div class="input-field">
-              <input type="password" required autocomplete="off" />
-              <label for="passeword">Mot de passe</label>
+              <div class="input-wrapper">
+                <input
+                  type="password"
+                  required
+                  autocomplete="off"
+                  class="input-control"
+                  id="passwordField"
+                />
+                <i class="fa-solid fa-eye-slash" id="eyeIconClose"></i>
+              <i class="fa-solid fa-eye" id="eyeIconOpen" style="display: none;"></i>
+            </div>
+                <label for="password" class="input-label" >Mot de passe</label>
+              </div>
+
+              <!-- OK SANS EYE  -->
+              <div class="input-field">
+                <input
+                  type="password"
+                  required
+                  autocomplete="off"
+                  class="input-control"
+                />
+                <label for="passeword" class="input-label">Mot de passe</label>
+              </div>
             </div>
             <button class="btn">Se connecter</button>
           </form>

@@ -9,6 +9,10 @@ body{
     font-family: "Cormorant Garamond", serif;
     font-weight: 800;
 }
+header img{
+    height: 100px;  
+    
+}
 #apropos img{
     height: 500px;
 }
