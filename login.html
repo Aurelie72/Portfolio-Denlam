@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <section id="login">
+        <div>
+          <!-- <h2>Se connecter</h2> -->
+          <form action="" class="form">
+            <div class="input-field">
+              <input type="text" required autocomplete="off" />
+              <label for="username">Nom d'utilisateur</label>
+            </div>
+
+            <div class="input-field">
+              <div class="input-wrapper">
+                <input
+                  type="password"
+                  required
+                  autocomplete="off"
+                  class="input-control"
+                  id="passwordField"
+                />
+                <i class="fa-solid fa-eye-slash" id="eyeIconClose"></i>
+              <i class="fa-solid fa-eye" id="eyeIconOpen" style="display: none;"></i>
+            </div>
+                <label for="password" class="input-label" >Mot de passe</label>
+              </div>
+
+              <!-- OK SANS EYE  -->
+              <div class="input-field">
+                <input
+                  type="password"
+                  required
+                  autocomplete="off"
+                  class="input-control"
+                />
+                <label for="passeword" class="input-label">Mot de passe</label>
+              </div>
+            </div>
+            <button class="btn">Se connecter</button>
+          </form>
+        </div>
+      </section>
+</body>
+</html>

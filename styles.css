@@ -9,10 +9,99 @@ body{
     font-family: "Cormorant Garamond", serif;
     font-weight: 800;
 }
-header img{
-    height: 100px;  
-    
+header{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+h1{
+    letter-spacing: 10px;
+    font-size: 50px;
+}
+nav{
+    position: relative;
+    width: 600px;
+    height: 50px;
+    background: rgb(255, 255, 255);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul{
+  display: flex;
+  list-style: none;
+  height: 60%;
+  gap: 50px;
+  position: relative;
+}
+
+nav ul span{
+  position: absolute;
+    top: 0;
+    left: 0;
+    width: 140px;
+    height: 100%;
+    background: linear-gradient(45deg,#fcf9f9, #b9b8b8 );
+    border-radius: 8px;
+    transition: 0.5s;
+    z-index: 0;
+    opacity: 0.5;
+}
+
+nav ul li a{
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  color: black;
+}
+
+/* déplacements */
+
+nav ul li:nth-child(1):hover ~ span{
+  left: 0;
+}
+
+nav ul li:nth-child(2):hover ~ span{
+  left: 165px;   
+  width: 100px;  
+}
+
+nav ul li:nth-child(3):hover ~ span{
+  left: 275px;   
+  width: 100px;  
+}
+
+nav ul li:nth-child(4):hover ~ span{
+  left: 380px;   
+  width: 100px;   
+}
+
+nav ul li:nth-child(5):hover ~ span{
+  left: 480px;   
+  width: 100px;   
+}
+
+#card{
+    display: flex;
+    justify-content: space-around;
+}
+#card > div{
+    border: 1px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 500px;
+    padding: 100px;
+    cursor: pointer;
+}
+
+
+
+
+
+
 #apropos img{
     height: 500px;
 }
