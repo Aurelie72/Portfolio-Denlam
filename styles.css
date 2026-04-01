@@ -9,6 +9,28 @@ body{
     font-family: "Cormorant Garamond", serif;
     font-weight: 800;
 }
+#apropos img{
+    height: 500px;
+}
+#apropos div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+#apropos p{
+    width: 500px;
+    font-size: 20px;
+    color: rgb(91, 89, 89);
+}
+
+section {
+    padding: 50px;
+}
+
+
+
+
 #reseaux {
   display: flex;
   flex-direction: column;
