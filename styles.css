@@ -1,38 +1,36 @@
 /* importer les fonts */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    background-color: rgb(255, 254, 254);
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 800;
+body {
+  background-color: rgb(255, 254, 254);
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 800;
 }
-header{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+section {
+  padding: 50px;
 }
-h1{
-    letter-spacing: 10px;
-    font-size: 50px;
+/* HEADER******************* */
+header {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-h3{
-letter-spacing: 15px;
-font-size: 30px;
-color: #b9b8b8;
+h1 {
+  letter-spacing: 10px;
+  font-size: 50px;
 }
-footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 80px;
+h3 {
+  letter-spacing: 15px;
+  font-size: 30px;
+  color: #b9b8b8;
 }
-
+/* NAGIVATION ****************** */
 nav{
     position: relative;
     width: 600px;
@@ -40,168 +38,117 @@ nav{
     background: rgb(255, 255, 255);
     border-radius: 8px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-nav ul{
+nav ul {
   display: flex;
   list-style: none;
   height: 60%;
-  gap: 50px;
+  gap: 20px;
   position: relative;
 }
 
-nav ul span{
-  position: absolute;
-    top: 0;
-    left: 0;
-    width: 140px;
-    height: 100%;
-    background: linear-gradient(45deg,#fcf9f9, #b9b8b8 );
-    border-radius: 8px;
-    transition: 0.5s;
-    z-index: 0;
-    opacity: 0.5;
-}
-
-nav ul li a{
+nav ul li a {
   position: relative;
   z-index: 1;
   text-decoration: none;
   color: black;
 }
 
-/* déplacements */
 
-nav ul li:nth-child(1):hover ~ span{
-  left: 0;
-}
+/* CARD E&A et CREATIONS  */
 
-nav ul li:nth-child(2):hover ~ span{
-  left: 165px;   
-  width: 100px;  
-}
-
-nav ul li:nth-child(3):hover ~ span{
-  left: 275px;   
-  width: 100px;  
-}
-
-nav ul li:nth-child(4):hover ~ span{
-  left: 380px;   
-  width: 100px;   
-}
-
-nav ul li:nth-child(5):hover ~ span{
-  left: 480px;   
-  width: 100px;   
-}
-
-
-#card {
-    display: flex;
-    justify-content: space-around;
-}
-
-/* Conteneur pour permettre l’overlay */
-#card > div {
-    position: relative;
-    cursor: pointer;
-        display: flex;
-    justify-content: center;
-    align-items: center;
-}
-/* Ton style d'image conservé */
-#card > div > img {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 500px;
-    height: 500px;
-    padding: 80px;
-    transition: opacity 0.4s ease;
-}
-
-
-
-
-#card > div > p {
-    position: absolute;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    /* background: rgba(0,0,0,0.6); */
-    color: black;
-    padding: 10px 20px;
-    font-size: 2rem;
-    pointer-events: none;
-}
-
-/* Effet hover */
-#card > div:hover img {
-    opacity: 0.4;
-}
-
-#card > div:hover p {
-    opacity: 1;
-}
-
-
-
-
-#apropos img{
-    height: 500px;
-}
-#apropos div{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 20px;
-}
-#apropos p{
-    width: 500px;
-    font-size: 20px;
-    color: rgb(91, 89, 89);
-}
-
-section {
-    padding: 50px;
-}
-
-
-
-
-#reseaux {
+#card{
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
+}
+.gallery{
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#card > div,
+.gallery > div {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+#card > div > img{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 500px;
+  height: 500px;
+  padding: 80px;
+  transition: opacity 0.4s ease;
+}
+.gallery > div > img{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  height:400px;
+  padding: 30px;
+  transition: opacity 0.4s ease;
+}
+#card > div > p,
+.gallery > div > p{
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  color: black;
+  padding: 10px 20px;
+  font-size: 2rem;
+  pointer-events: none;
+}
+#card > div:hover img,
+.gallery img:hover {
+  opacity: 0.4;
+}
+#card > div:hover p,
+.gallery > div:hover p {
+  opacity: 1;
+}
+
+/* A PROPOS ********************** */
+#apropos img {
+  height: 500px;
+}
+#apropos div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   gap: 20px;
 }
-#reseaux span {
-    display: flex;
-    justify-content: flex-end; 
-    gap: 20px;
-}
-#reseaux span a {
-  font-size: 25px;
+#apropos p {
+  width: 500px;
+  font-size: 20px;
   color: rgb(91, 89, 89);
 }
-#contact{
-    display: flex;
+
+/* CONTACT **************************** */
+#contact {
+  display: flex;
 }
-#formulaire{ 
-    height: 100vh;  
-    display: flex;
-    width: 78%;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+#formulaire {
+  height: 100vh;
+  display: flex;
+  width: 78%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
-#coordonnées{
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-    padding-right: 80px;
+textarea {
+  resize: none;
+  width: 100%;
 }
-textarea{
-    resize: none;
-    width: 100%;
+#coordonnées {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  padding-right: 80px;
 }
 form {
   max-width: 900px;
@@ -210,82 +157,155 @@ form {
   flex-direction: column;
   gap: 1.5rem;
 }
+/* A REVOIR réseaux */
 
-#login{
-    position: relative;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#reseaux {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#reseaux span {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+#reseaux span a {
+  font-size: 25px;
+  color: rgb(91, 89, 89);
+}
+/* LOGIN ******************* */
+#login {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .input-field,
-.container_checkbox{
-    position: relative;
-    width: 350px;
+.container_checkbox {
+  position: relative;
+  width: 350px;
 }
-.input-field label{
-    position: absolute;
-    pointer-events: none;
-    border-color: transparent;
-    left: 15px;
-    transform: translateY(0.6rem);
-    transition: all 0.3s ease;
+.input-field label {
+  position: absolute;
+  pointer-events: none;
+  border-color: transparent;
+  left: 15px;
+  transform: translateY(0.6rem);
+  transition: all 0.3s ease;
 }
 .input-field input,
-.input-field textarea{
-    padding: 10px 15px;
-    font-style: 1rem;
-    border-radius: 8px;
-    border: 1px solid #b9b8b8;
-    letter-spacing: 1px;
-    width: 100%;
-    background-color: #ffffff;
+.input-field textarea {
+  padding: 10px 15px;
+  font-style: 1rem;
+  border-radius: 8px;
+  border: 1px solid #b9b8b8;
+  letter-spacing: 1px;
+  width: 100%;
+  background-color: #ffffff;
 }
 .input-field input:focus,
 .input-field input:valid,
 .input-field textarea:focus,
-.input-field textarea:valid{
-outline: none;
+.input-field textarea:valid {
+  outline: none;
 }
 .input-field input:focus ~ label,
 .input-field input:valid ~ label,
 .input-field textarea:focus ~ label,
-.input-field textarea:valid ~ label{
-    transform: translateY(-51%) translateX(-10px) scale(0.8);
-background-color: #fff;
-padding: 0px 5px;
-color: #b9b8b8;
-font-weight: bold;
-letter-spacing: 1px;
-border: none;
-border-radius: 100px;
+.input-field textarea:valid ~ label {
+  transform: translateY(-51%) translateX(-10px) scale(0.8);
+  background-color: #fff;
+  padding: 0px 5px;
+  color: #b9b8b8;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 100px;
 }
 
-.btn{
-    padding: 10px 15px;
-    font-size: 1rem;
-    font-family: "Cormorant Garamond", serif;
-    border-radius: 8px;
-    border: none;
-    background-color: #b9b8b8;
-    color: #fff;
-    cursor: pointer;
+.btn {
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-family: "Cormorant Garamond", serif;
+  border-radius: 8px;
+  border: none;
+  background-color: #b9b8b8;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Filtres ***************** */
+/* NAGIVATION ****************** */
+
+#buttons {
+    position: relative;
+    width: 100%;
+    /* height: 50px; */
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+}
+
+#container_buttons {
+  display: flex;
+  list-style: none;
+  height: 60%;
+  gap: 50px;
+  position: relative;
+}
+
+#container_buttons .highlight{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 100%;
+  background: linear-gradient(45deg, #fcf9f9, #b9b8b8);
+  border-radius: 8px;
+  transition: 0.5s;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+#container_buttons .button {
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  color: black;
+  border: none;
+  background-color: transparent;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 800;
+  font-size: 1.5em;
+}
+
+#buttons #container_buttons .button:nth-child(1):hover ~ span {
+  left: 0;
+}
+
+#buttons #container_buttons .button:nth-child(2):hover ~ span {
+  left: 80px;
+  width: 100px;
+}
+
+#buttons #container_buttons .button:nth-child(3):hover ~ span {
+  left: 210px;
+  width: 100px;
+}
+#buttons #container_buttons .button:nth-child(4):hover ~ span {
+  left: 340px;
+  width: 130px;
 }
 
 
-/* CREATIONS  */
 
-.gallery {
-	width: 100%;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-column-gap: 20px;
-	grid-row-gap: 20px;
-	margin-top: 30px;
-}
-
-.gallery img {
-	width: 100%;
-height: 457px;
+/* FOOTER ********************************* */
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 80px;
 }

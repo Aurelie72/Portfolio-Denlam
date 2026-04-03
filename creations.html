@@ -15,31 +15,108 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap"
       rel="stylesheet"
     />
-    <script src="script.js" defer></script>
+    <script src="creations.js" defer></script>
   </head>
   <body>
-    <div>
-      <button>Tous</button>
-      <button>Lampes</button>
-      <button>Mobilier</button>
-      <button>Décoration</button>
-      <span></span>
-    </div>
+    <section id="buttons">
+      <div id="container_buttons">
+        <button class="button" data-category="tous">Tous</button>
+        <button class="button" data-category="lampe">Lampes</button>
+        <button class="button" data-category="mobilier">Mobilier</button>
+        <button class="button" data-category="decoration">Décoration</button>
+        <span class="highlight"></span>
+      </div>
+    </section>
     <div class="gallery">
-      <img src="./assets/pexels-camerongawn-33678429.jpg" alt="" />
-      <img
-        src="./assets/pexels-ervin-fon-trichev-102943620-23270504.jpg"
-        alt=""
-      />
-      <img src="./assets/pexels-noel-george-196037-11675552.jpg" alt="" />
-      <img src="./assets/pexels-rulo-mora-227265774-14161060.jpg" alt="" />
-      <img src="./assets/pexels-yessitrex-30794216.jpg" alt="" />
-      <img src="./assets/pexels-cottonbro-6627112.jpg" alt="" />
-      <img src="./assets/pexels-hieu-d-ng-396773807-20727696.jpg" alt="" />
-      <img src="./assets/pexels-ivan-s-7671134.jpg" alt="" />
-      <img src="./assets/pexels-sarowar-hussain-3111579-12284215.jpg" alt="" />
-      <img src="./assets/pexels-satvinder46-29438770.jpg" alt="" />
-      <img src="./assets/pexels-waqas-ilyas-81841622-36718705.jpg" alt="" />
+      <div class="container_img">
+        <img
+          src="./assets/pexels-satvinder46-29438770.jpg"
+          alt=" "
+          class="decoration"
+        />
+        <p>Nom de cet objet</p>
+      </div>
+      <div class="container_img">
+        <img
+          src="./assets/pexels-camerongawn-33678429.jpg"
+          alt=""
+          class="lampe"
+        />
+        <p>Nom de cette lampe</p>
+      </div>
+      <div class="container_img">
+        <img
+          src="./assets/pexels-cottonbro-6627112.jpg"
+          alt=""
+          class="mobilier"
+        />
+        <p>Nom de cette chaise</p>
+      </div>
+      <div class="container_img">
+        <img
+          src="./assets/pexels-ervin-fon-trichev-102943620-23270504.jpg"
+          alt=""
+          class="lampe"
+        />
+        <p>Nom de cette lampe</p>
+      </div>
+      <div class="container_img">
+        <img
+          src="./assets/pexels-waqas-ilyas-81841622-36718705.jpg"
+          alt=""
+          class="mobilier"
+        />
+        <p>Nom de cette chaise</p>
+      </div>
+      <div class="container_img">
+        <img
+          src="./assets/pexels-noel-george-196037-11675552.jpg"
+          alt=""
+          class="lampe"
+        />
+        <p>Nom de cette lampe</p>
+      </div>
+      <div class="container_img">
+        <img
+          src="./assets/pexels-rulo-mora-227265774-14161060.jpg"
+          alt=""
+          class="lampe"
+        />
+        <p>Nom de cette lampe</p>
+      </div>
+      <div class="container_img">
+        <img
+          src="./assets/pexels-yessitrex-30794216.jpg"
+          alt=""
+          class="lampe"
+        />
+        <p>Nom de cette lampe</p>
+      </div>
+
+      <div class="container_img">
+        <img
+          src="./assets/pexels-hieu-d-ng-396773807-20727696.jpg"
+          alt=""
+          class="decoration"
+        />
+        <p>Nom de cet objet</p>
+      </div>
+      <div class="container_img">
+        <img
+          src="./assets/pexels-ivan-s-7671134.jpg"
+          alt=""
+          class="decoration"
+        />
+        <p>Nom de cet objet</p>
+      </div>
+      <div class="container_img">
+        <img
+          src="./assets/pexels-sarowar-hussain-3111579-12284215.jpg"
+          alt=""
+          class="mobilier"
+        />
+        <p>Nom de cette chaise</p>
+      </div>
     </div>
   </body>
 </html>
